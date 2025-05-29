@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Contact = ({ darkMode }) => {
@@ -16,7 +16,7 @@ const Contact = ({ darkMode }) => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/contact", formData);
+      await axios.post("https://dream-feature-portal-do2c.onrender.com/api/contact", formData);
       alert("Message sent!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {

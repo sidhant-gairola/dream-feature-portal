@@ -13,7 +13,7 @@ const LiveIdeaWall = ({ darkMode }) => {
 
     const fetchIdeas = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/ideas");
+            const res = await axios.get("https://dream-feature-portal-do2c.onrender.com/api/ideas");
             setIdeas(res.data);
         } catch (error) {
             console.error("Failed to fetch ideas:", error);
@@ -29,7 +29,7 @@ const LiveIdeaWall = ({ darkMode }) => {
     const handleLike = async (id) => {
         const userId = localStorage.getItem("userId") || "anonymous";
         try {
-            await axios.post(`http://localhost:5000/api/ideas/${id}/like`, {
+            await axios.post(`https://dream-feature-portal-do2c.onrender.com/api/ideas/${id}/like`, {
                 userId,
             });
             fetchIdeas();

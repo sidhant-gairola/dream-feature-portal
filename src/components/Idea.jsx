@@ -20,7 +20,7 @@ const Idea = ({ darkMode }) => {
         setStatus("Submitting...");
 
         try {
-            const response = await fetch("http://localhost:5000/api/ideas", {
+            const response = await fetch("https://dream-feature-portal-do2c.onrender.com/api/ideas", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

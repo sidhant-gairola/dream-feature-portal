@@ -1,5 +1,3 @@
-import React from 'react';
-
 const About = ({ darkMode }) => {
     return (
         <section className={`min-h-screen py-16 px-4 ${darkMode ? "bg-neutral-900 text-white" : "bg-gray-50 text-black"}`} id="about">
