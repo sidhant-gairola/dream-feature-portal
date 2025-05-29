@@ -1,0 +1,17 @@
+.mobile-view {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .menu-items {
+        display: none;
+    }
+
+    .darkmode-container {
+        display: none;
+    }
+
+    .mobile-view {
+        display: flex;
+    }
+}
