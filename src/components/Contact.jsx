@@ -27,14 +27,14 @@ const Contact = ({ darkMode }) => {
 
   return (
     <div
-      className={`py-20 flex items-center justify-center p-4 ${darkMode ? "bg-neutral-900 text-white" : "bg-gray-100 text-black"
+      className={`flex items-center justify-center py-30 ${darkMode ? "bg-neutral-900 text-white" : "bg-gray-100 text-black"
         }`}
     >
       <div
-        className={`p-8 rounded-lg shadow-md w-full max-w-md ${darkMode ? "bg-black text-white" : "bg-white text-black"
+        className={`max-w-xl p-8 rounded-lg shadow-md w-full ${darkMode ? "bg-neutral-800 text-white" : "bg-white text-black"
           }`}
       >
-        <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+        <h2 className="text-2xl text-purple-700 font-bold mb-6 text-center">Contact Us</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block mb-1 font-medium">Name</label>
@@ -45,8 +45,8 @@ const Contact = ({ darkMode }) => {
               onChange={handleChange}
               required
               className={`w-full border rounded px-3 py-2 ${darkMode
-                  ? "bg-neutral-800 text-white border-gray-600"
-                  : "bg-white text-black border-gray-300"
+                ? "bg-neutral-800 text-white border-gray-600"
+                : "bg-white text-black border-gray-300"
                 }`}
             />
           </div>
@@ -59,8 +59,8 @@ const Contact = ({ darkMode }) => {
               onChange={handleChange}
               required
               className={`w-full border rounded px-3 py-2 ${darkMode
-                  ? "bg-neutral-800 text-white border-gray-600"
-                  : "bg-white text-black border-gray-300"
+                ? "bg-neutral-800 text-white border-gray-600"
+                : "bg-white text-black border-gray-300"
                 }`}
             />
           </div>
@@ -73,14 +73,14 @@ const Contact = ({ darkMode }) => {
               required
               rows="4"
               className={`w-full border rounded px-3 py-2 ${darkMode
-                  ? "bg-neutral-800 text-white border-gray-600"
-                  : "bg-white text-black border-gray-300"
+                ? "bg-neutral-800 text-white border-gray-600"
+                : "bg-white text-black border-gray-300"
                 }`}
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300"
+            className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition duration-300 mt-10"
           >
             Send Message
           </button>

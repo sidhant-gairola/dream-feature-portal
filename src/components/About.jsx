@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = ({ darkMode }) => {
     return (
-        <section className={`py-16 px-4 ${darkMode ? "bg-neutral-900 text-white" : "bg-gray-50 text-black"}`} id="about">
+        <section className={`min-h-screen py-16 px-4 ${darkMode ? "bg-neutral-900 text-white" : "bg-gray-50 text-black"}`} id="about">
             <div className="max-w-5xl mx-auto text-center">
                 <h2 className="text-3xl font-bold text-purple-700 mb-4">About Us</h2>
                 <p className="text-lg leading-relaxed mt-4">

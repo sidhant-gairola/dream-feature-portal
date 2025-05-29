@@ -58,8 +58,8 @@ const LiveIdeaWall = ({ darkMode }) => {
                             <li
                                 key={_id}
                                 className={`rounded p-4 mb-4 transition border shadow-sm hover:shadow-md ${darkMode
-                                        ? "bg-neutral-800 border-neutral-700 text-gray-200"
-                                        : "bg-gray-50 border-gray-200 text-gray-800"
+                                    ? "bg-neutral-800 border-neutral-700 text-gray-200"
+                                    : "bg-gray-50 border-gray-200 text-gray-800"
                                     }`}
                             >
                                 <div className="flex justify-between items-center mb-2">

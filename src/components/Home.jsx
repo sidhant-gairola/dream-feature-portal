@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Features from './Features';
 import LiveIdeaWall from './LiveIdeaWall';
