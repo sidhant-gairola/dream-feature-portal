@@ -10,6 +10,7 @@ const Idea = ({ darkMode }) => {
     });
 
     const [status, setStatus] = useState("");
+    const baseURL = import.meta.env.VITE_API_URL;
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,7 +21,7 @@ const Idea = ({ darkMode }) => {
         setStatus("Submitting...");
 
         try {
-            const response = await fetch("https://dream-feature-portal-do2c.onrender.com/api/ideas", {
+            const response = await fetch(`${baseURL}/api/ideas`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

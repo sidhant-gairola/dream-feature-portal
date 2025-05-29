@@ -5,6 +5,8 @@ import { format } from "timeago.js";
 const LiveIdeaWall = ({ darkMode }) => {
     const [ideas, setIdeas] = useState([]);
 
+    const baseURL = import.meta.env.VITE_API_URL;
+
     useEffect(() => {
         if (!localStorage.getItem("userId")) {
             localStorage.setItem("userId", crypto.randomUUID());
@@ -13,7 +15,7 @@ const LiveIdeaWall = ({ darkMode }) => {
 
     const fetchIdeas = async () => {
         try {
-            const res = await axios.get("https://dream-feature-portal-do2c.onrender.com/api/ideas");
+            const res = await axios.get(`${baseURL}/api/ideas`);
             setIdeas(res.data);
         } catch (error) {
             console.error("Failed to fetch ideas:", error);
@@ -29,7 +31,7 @@ const LiveIdeaWall = ({ darkMode }) => {
     const handleLike = async (id) => {
         const userId = localStorage.getItem("userId") || "anonymous";
         try {
-            await axios.post(`https://dream-feature-portal-do2c.onrender.com/api/ideas/${id}/like`, {
+            await axios.post(`${baseURL}/api/ideas/${id}/like`, {
                 userId,
             });
             fetchIdeas();

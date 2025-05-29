@@ -12,11 +12,13 @@ const Contact = ({ darkMode }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const baseURL = import.meta.env.VITE_API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      await axios.post("https://dream-feature-portal-do2c.onrender.com/api/contact", formData);
+      await axios.post(`${baseURL}/api/contact`, formData);
       alert("Message sent!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
