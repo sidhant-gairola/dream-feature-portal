@@ -26,8 +26,9 @@ mongoose
 // Routes
 app.post("/api/ideas", async (req, res) => {
     try {
-        const { name, title, description } = req.body;
-        const newIdea = new Idea({ name, title, description });
+        console.log(req.body);
+        const { name, title, description, category, mood } = req.body;
+        const newIdea = new Idea({ name, title, description, category, mood });
         await newIdea.save();
         res.status(201).json({ message: "Idea saved successfully!" });
     } catch (error) {

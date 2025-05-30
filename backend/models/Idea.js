@@ -4,8 +4,16 @@ const ideaSchema = new mongoose.Schema({
     name: String,
     title: String,
     description: String,
-    category: { type: String, enum: ["UI", "Backend", "AI", "Other"], default: "Other" },
-    mood: { type: String, default: "💡" },
+    category: {
+        type: String,
+        enum: ["UI", "Backend", "AI", "Other"],
+        default: "Other"
+    },
+    mood: {
+        type: String,
+        enum: ['😊', '🔥', '💡', '🤔'],
+        default: "💡"
+    },
     likes: { type: Number, default: 0 },
     likedBy: [{ type: String }]
 }, { timestamps: true });
